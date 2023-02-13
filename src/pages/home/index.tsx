@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     flex-col
     min-h-screen
     h-14
-    bg-gradient-to-r from-violet-500/60 to-fuchsia-500/60
+    bg-gradient-to-t from-indigo-400 to-indigo-900
     bg-cover
     bg-no-repeat
     overflow-hidden
