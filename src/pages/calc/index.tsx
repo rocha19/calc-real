@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import { normalizeCurrency, priceFormatter } from '../../utils'
 
-export const Calc = () => {
+const Calc = () => {
   const [range, setRange] = useState<string>('')
   const [andar, setAndar] = useState<string>('')
   const [caixa, setCaixa] = useState<string>('')
@@ -132,3 +132,5 @@ export const Calc = () => {
     </div>
   )
 }
+
+export default Calc

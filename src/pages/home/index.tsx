@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { Calc } from '../calc'
+import Calc from '../calc'
 const Home: NextPage = () => {
   return (
     <div className='
