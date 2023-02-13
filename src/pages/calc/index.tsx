@@ -23,8 +23,6 @@ export const Calc = () => {
       ? 0
       : calcValue
 
-  console.log(priceFormatter.format(valorParcelaCaixa))
-
   return (
     <div className="bg-zinc-800 border-2 grid grid-cols-2">
 
