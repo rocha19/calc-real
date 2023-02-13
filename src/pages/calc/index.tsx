@@ -19,9 +19,9 @@ const Calc = () => {
   const calcValue =
     ((parseAndar - parseCaixa - parseEntrada) / parseParcelaDaConstrutora) +
     (valorParcelaCaixa * (taxaDeEvolucaoDeObra / 100))
-    const totalValue = isNaN(calcValue)
-      ? 0
-      : calcValue
+  const totalValue = isNaN(calcValue)
+    ? 0
+    : calcValue
 
   return (
     <div className="shadow-2xl bg-zinc-800 border-2 border-violet-900 grid grid-cols-2">
@@ -56,7 +56,7 @@ const Calc = () => {
         </div>
 
         <div className="mt-3 ml-3 grid">
-          <label htmlFor="">Insira o valor da PC</label>
+          <label htmlFor="">Insira o valor da caixa</label>
           <input
             type="text"
             className='bg-zinc-200 text-zinc-900 text-center h-6 w-44'
@@ -82,7 +82,7 @@ const Calc = () => {
         </div>
 
         <div className="mt-3 ml-3 grid">
-          <label htmlFor="">Insira parcelas da cons.</label>
+          <label htmlFor="">Insira qtd de p.c.</label>
           <input
             type="text"
             className='bg-zinc-200 text-zinc-900 text-center h-6 w-44'
@@ -96,6 +96,16 @@ const Calc = () => {
 
       <div className='mt-11 border-l-2 border-violet-900'>
         <div className="mt-3 ml-3 grid">
+          <label htmlFor="">Valor total da const.</label>
+          <input
+            type="text"
+            placeholder='R$ 0,00'
+            value={priceFormatter.format(parseAndar - parseCaixa)}
+            className='cursor-not-allowed bg-zinc-400 text-zinc-900 text-center h-6 w-44'
+          />
+        </div>
+
+        <div className="mt-3 ml-3 grid">
           <label htmlFor="">Valor das Parcelas</label>
           <input
             type="text"
@@ -105,15 +115,6 @@ const Calc = () => {
           />
         </div>
 
-        <div className="mt-3 ml-3 grid">
-          <label htmlFor="">Valor da construtora</label>
-          <input
-            type="text"
-            placeholder='R$ 0,00'
-            value={priceFormatter.format(parseAndar - parseCaixa)}
-            className='cursor-not-allowed bg-zinc-400 text-zinc-900 text-center h-6 w-44'
-          />
-        </div>
         <div className='text-center grid mt-5'>
           <label htmlFor="">Evolução de obra</label>
           <div>
@@ -129,6 +130,7 @@ const Calc = () => {
           </div>
         </div>
       </div>
+      <p className='m-1 text-xs text-red-500'>*p.c. - parcela da construtora</p>
     </div>
   )
 }
