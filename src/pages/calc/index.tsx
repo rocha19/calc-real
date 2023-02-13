@@ -24,7 +24,7 @@ const Calc = () => {
       : calcValue
 
   return (
-    <div className="bg-zinc-800 border-2 grid grid-cols-2">
+    <div className="shadow-2xl bg-zinc-800 border-2 border-violet-900 grid grid-cols-2">
 
       <div className='mx-3 my-3'>
         <h1 className="ml-1 mt-2">Calculo de Parcelas</h1>
@@ -94,7 +94,7 @@ const Calc = () => {
         </div>
       </div>
 
-      <div className='mt-11 border-l-2'>
+      <div className='mt-11 border-l-2 border-violet-900'>
         <div className="mt-3 ml-3 grid">
           <label htmlFor="">Valor das Parcelas</label>
           <input
